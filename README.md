@@ -1,10 +1,10 @@
 # Fractality and Long-Range Correlations
 Fractality are a characteristic of a complex system in which self-similarity at different scales can be found. Fractality quantifies dynamically fluctuating variability of systems through multi-scale analyses and provides insights into underlying structures of objects under study. 
 
-Probably the most widely used methods to analyze fractality and long-range correlations are Detrended Fluctuation Analysis (DFA; Peng, 1994) and Multi-Fractal Detrended Fluctuation Analysis (MFDFA; Kantelhardt, 2002), which is an extension of DFA. 
+Probably the most widely used methods to analyze fractality and long-range correlations are Detrended Fluctuation Analysis (DFA; Peng et al., 1994) and Multi-Fractal Detrended Fluctuation Analysis (MFDFA; Kantelhardt et al., 2002), which is an extension of DFA. 
 
 # Multi-Fractal Detrended Fluctuation Analysis (MFDFA)
-In what follows, I outline the MFDFA procedure, according to _Kantelhardt, 2002_, followed by a detailed account of each step and an elaboration on how multifractal characteristics are computed. 
+In what follows, I outline the MFDFA procedure, according to _Kantelhardt et al., 2002_, followed by a detailed account of each step and an elaboration on how multifractal characteristics are computed. 
  
 Given a series $X = x(1), x(2), \cdots, x(N)$, MFDFA processes the series as follows: 
 
@@ -55,24 +55,29 @@ In step 3, what remains after detrending are residuals, which are entered into t
 The mean square fluctuations, which are calculated in step 3, resemble the mean variance of windows with specific size. Recall from the outset of our discussion that our goal is to determine the growth rate of fluctuations, which is directly proportional to the number of steps in a random walk. That is why, after creation of the profile of the series and segmentation of it into windows the mean square fluctuations for windows of different sizes are calculated and compared in the following steps. 
 
 ## Multiple Scaling Factors and Multifractality
-The difference between DFA and MFDFA lies in steps 4 and 5. In DFA only one growth factor is calculated for a time series. However, the long-range correlation paradigm of a time series may be too complex to be explained by a single value.  _Kantelhardt, 2002_ thus proposed MFDFA as an extension to DFA in order to capture various scaling patterns by calculating the $q$th order of the mean square fluctuations.
+The difference between DFA and MFDFA lies in steps 4 and 5. In DFA only one growth factor is calculated for a time series. However, the long-range correlation paradigm of a time series may be too complex to be explained by a single value.  _Kantelhardt et al., 2002_ thus proposed MFDFA as an extension to DFA in order to capture various scaling patterns by calculating the $q$th order of the mean square fluctuations.
 Let us focus first on $q=2$. This setting turns in step 4 to a form, which resembles the mean standard deviation for windows with size $s$. This is in fact the scaling factor, which is computed by DFA.
 The resulting exponent in step 5, $h(2)$, is an important measure in fractal analysis. It equals to the Hurst Exponent for stationary series.
 
-By changing the value of $q$, the procedure puts emphasis on larger or smaller fluctuations. If $q>2$, it accentuates larger values, while if $q<2$, it emphasizes smaller variations. Given $q$, the scaling factor, $h(q)$, is calculated by fitting a line to the log-log plot of $F_q(s)$ in step 5. If the series is multifractal, fluctuations are heterogeneous and $h(q)$ varies depending on its parameter, $q$. However, if fluctuations are homogeneous, changing the value of $q$ results in no difference in scaling factors (for more discussion, see, Roeske, 2018). 
+By changing the value of $q$, the procedure puts emphasis on larger or smaller fluctuations. If $q>2$, it accentuates larger values, while if $q<2$, it emphasizes smaller variations. Given $q$, the scaling factor, $h(q)$, is calculated by fitting a line to the log-log plot of $F_q(s)$ in step 5. If the series is multifractal, fluctuations are heterogeneous and $h(q)$ varies depending on its parameter, $q$. However, if fluctuations are homogeneous, changing the value of $q$ results in no difference in scaling factors (for more discussion, see, Roeske et al., 2018). 
 
-## Singularity Spectrum}
+## Singularity Spectrum
 Once scaling factors are computed, we need a way to represent the multifractality of a series. The singularity spectrum, $f(\alpha)$, summarizes multifractality information of a series effectively and lends itself to an elegant visualization. It is computed as:
 $$\alpha=h(q)+qh'(q)$$
 $$f(\alpha)=q[\alpha-h(q)]+1$$     
 
-The width of the singularity spectrum, $D=\alpha_{max}-\alpha_{min}$, shows the _degree of multifractality_ of a series (for more technical details, cf.,  Kantelhardt, 2002). 
+The width of the singularity spectrum, $D=\alpha_{max}-\alpha_{min}$, shows the _degree of multifractality_ of a series (for more technical details, cf.,  Kantelhardt et al., 2002). 
 $\alpha_{min}$ and $\alpha_{max}$ denote the leftmost side and the rightmost side of $f(\alpha)$, respectively. If $h(q), \forall q$ are in close proximity to each other, the singularity spectrum is narrow and the series is regarded to be monofractal. In the case of multifractal series, the width of the singularity spectrum expands.
 
-## Fractal Asymmetry}
+## Fractal Asymmetry
 The multifractality of series may incline more toward either small or large quantities, leading to a skewness in the singularity spectrum, which can be measured by _fractal asymmetry_ (Drozdz et al., 2015):  
-\begin{equation}
-    \mathcal{A} = \frac{\Delta\alpha_L-\Delta\alpha_R}{\Delta\alpha_L+\Delta\alpha_R}
-\end{equation}
+$$\mathcal{A} = \frac{\Delta\alpha_L-\Delta\alpha_R}{\Delta\alpha_L+\Delta\alpha_R}$$
 $\Delta\alpha_L=\alpha_0-\alpha_{min}$ and $\Delta\alpha_R=\alpha_{max}-\alpha_{0}$ are the width of the right and the left side of the singularity spectrum curve, respectively and $\alpha_0$, corresponding to $q=0$, usually points to the peak of the $f(\alpha)$ curve. 
 For seeing code and examples, look at the ipynb file.
+
+
+### References
+**  Peng, C.-K., S. V. Buldyrev, S. Havlin, M. Simons, H. E. Stanley, and A. L. Goldberger (1994). “Mosaic organization of DNA nucleotides”. In: Physical Review E 49.2, pp. 1685–1689.
+**  Kantelhardt, JanW., Stephan A. Zschiegner, Eva Koscielny-Bunde, Shlomo Havlin, Armin Bunde, and H.Eugene Stanley (2002). “Multifractal detrended fluctuation analysis of nonstationary time series”. In: Physica A: Statistical Mechanics and Its Applications 316.1, pp. 87–114.
+** Drozdz, Stanislaw and Pawel Swiecimka (2015). “Detecting and interpreting distortions in hierarchical organization of complex time series”. In: Physical Review E 91.3, p. 030902.
+** Roeske, Tina C., Damian Kelty-Stephen, and SebastianWallot (2018). “Multifractal analysis reveals music-like dynamic structure in songbird rhythms”. In: Scientific Reports 8.1.
