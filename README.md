@@ -8,8 +8,7 @@ In what follows, I outline the MFDFA procedure, according to _Kantelhardt, 2002_
  
 Given a series $X = x(1), x(2), \cdots, x(N)$, MFDFA processes the series as follows: 
 
-1-	  Build the profile of the series by subtracting the mean and computing the cumulative sum:
-    
+1-	  Build the profile of the series by subtracting the mean and computing the cumulative sum:    
 $$Y(i) = \sum_{k=1}^{i} [x(k) - \langle X\rangle], i=1, \cdots, N$$
     
 in which $\langle X\rangle$ is the mean of $X$.
@@ -18,10 +17,10 @@ in which $\langle X\rangle$ is the mean of $X$.
     As the length of the series, $N$, may not be always divisible by $s$ and a portion of the series in the end may be excluded from the computation, the windowing procedure is repeated starting from the end. As a result, the number of windows increases to $2 \times N_s$.
 
 3-	 Detrend the values in each window $v$, $v=1,\cdots,2\times N_s$, by subtracting the best fitting line, $Y'$, and calculate the mean square fluctuation of residuals:
-    $$F^2(s, v)=\frac{1}{s}\sum_{i=1}^{s}[Y(s \times (v-1) + i)-Y'(s \times (v-1) + i)]^2$$
+$$F^2(s, v)=\frac{1}{s}\sum_{i=1}^{s}[Y(s \times (v-1) + i)-Y'(s \times (v-1) + i)]^2$$
 
 4-	 Calculate the $q$th order of the mean square fluctuations:
-    $$F_q(s) = \{\frac{1}{2\times N_s}\sum_{v=1}^{N_s}[F^2(s, v)]^{q/2}\}^{1/q}$$
+$$F_q(s) = \{\frac{1}{2\times N_s}\sum_{v=1}^{N_s}[F^2(s, v)]^{q/2}\}^{1/q}$$
 	
 5-	 Compute the growth factor of fluctuations, $h(q)$, using a log-log regression on $F_q(s)$ values, i.e. $\log F_q(s)\sim h(q) \times \log s$
 
@@ -56,20 +55,16 @@ In step 3, what remains after detrending are residuals, which are entered into t
 The mean square fluctuations, which are calculated in step 3, resemble the mean variance of windows with specific size. Recall from the outset of our discussion that our goal is to determine the growth rate of fluctuations, which is directly proportional to the number of steps in a random walk. That is why, after creation of the profile of the series and segmentation of it into windows the mean square fluctuations for windows of different sizes are calculated and compared in the following steps. 
 
 ## Multiple Scaling Factors and Multifractality
-The difference between DFA and MFDFA lies in steps 4 and 5. In DFA only one growth factor is calculated for a time series. However, the long-range correlation paradigm of a time series may be too complex to be explained by a single value.  _Kantelhardt, 2002_ thus proposed MFDFA as an extension to DFA in order to capture various scaling patterns by calculating the `q`th order of the mean square fluctuations.
-Let us focus first on `q=2`. This setting turns in step 4 to a form, which resembles the mean standard deviation for windows with size `s`. This is in fact the scaling factor, which is computed by DFA.
-The resulting exponent in step 5, `h(2)`, is an important measure in fractal analysis. It equals to the Hurst Exponent for stationary series.
+The difference between DFA and MFDFA lies in steps 4 and 5. In DFA only one growth factor is calculated for a time series. However, the long-range correlation paradigm of a time series may be too complex to be explained by a single value.  _Kantelhardt, 2002_ thus proposed MFDFA as an extension to DFA in order to capture various scaling patterns by calculating the $q$th order of the mean square fluctuations.
+Let us focus first on $q=2$. This setting turns in step 4 to a form, which resembles the mean standard deviation for windows with size $s$. This is in fact the scaling factor, which is computed by DFA.
+The resulting exponent in step 5, $h(2)$, is an important measure in fractal analysis. It equals to the Hurst Exponent for stationary series.
 
-By changing the value of `q`, the procedure puts emphasis on larger or smaller fluctuations. If `q>2`, it accentuates larger values, while if `q<2`, it emphasizes smaller variations. Given `q`, the scaling factor, `h(q)`, is calculated by fitting a line to the log-log plot of $F_q(s)$ in step 5. If the series is multifractal, fluctuations are heterogeneous and `h(q)` varies depending on its parameter, `q`. However, if fluctuations are homogeneous, changing the value of `q` results in no difference in scaling factors (for more discussion, see, Roeske, 2018). 
+By changing the value of $q$, the procedure puts emphasis on larger or smaller fluctuations. If $q>2$, it accentuates larger values, while if $q<2$, it emphasizes smaller variations. Given $q$, the scaling factor, $h(q)$, is calculated by fitting a line to the log-log plot of $F_q(s)$ in step 5. If the series is multifractal, fluctuations are heterogeneous and $h(q)$ varies depending on its parameter, $q$. However, if fluctuations are homogeneous, changing the value of $q$ results in no difference in scaling factors (for more discussion, see, Roeske, 2018). 
 
 ## Singularity Spectrum}
 Once scaling factors are computed, we need a way to represent the multifractality of a series. The singularity spectrum, $f(\alpha)$, summarizes multifractality information of a series effectively and lends itself to an elegant visualization. It is computed as:
-\begin{equation}
-    \begin{aligned}
-        \alpha &=h(q)+qh'(q) \\
-        f(\alpha) &=q[\alpha-h(q)]+1        
-    \end{aligned}
-\end{equation}
+$$\alpha=h(q)+qh'(q)$$
+$$f(\alpha)=q[\alpha-h(q)]+1$$     
 
 The width of the singularity spectrum, $D=\alpha_{max}-\alpha_{min}$, shows the _degree of multifractality_ of a series (for more technical details, cf.,  Kantelhardt, 2002). 
 $\alpha_{min}$ and $\alpha_{max}$ denote the leftmost side and the rightmost side of $f(\alpha)$, respectively. If $h(q), \forall q$ are in close proximity to each other, the singularity spectrum is narrow and the series is regarded to be monofractal. In the case of multifractal series, the width of the singularity spectrum expands.
