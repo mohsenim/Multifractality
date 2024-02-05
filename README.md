@@ -1,10 +1,14 @@
 # Fractality and Long-Range Correlations
 Fractality are a characteristic of a complex system in which self-similarity at different scales can be found. Fractality quantifies dynamically fluctuating variability of systems through multi-scale analyses and provides insights into underlying structures of objects under study. 
 
-Probably the most widely used methods to analyze fractality and long-range correlations are Detrended Fluctuation Analysis (DFA; Peng et al., 1994) and Multi-Fractal Detrended Fluctuation Analysis (MFDFA; Kantelhardt et al., 2002), which is an extension of DFA. 
+Probably the most widely used methods to analyze fractality and long-range correlations are Detrended Fluctuation Analysis (DFA; Peng et al., 1994) and Multi-Fractal Detrended Fluctuation Analysis (MFDFA; Kantelhardt et al., 2002), which is an extension of DFA. We used MFDFA to analyze long-range correlation patterns of canonical/fictional, non-canonical/fictional and non-fictional texts in our paper (Mohseni et al., 2021). 
+
+In what follows, I outline the MFDFA procedure, according to _Kantelhardt et al., 2002_, followed by a detailed account of each step and an elaboration on how multifractal characteristics are computed. 
+
+You can access the code in `MFDFA.py` and view `MFDFA.ipynb` for running the code step by step and seeing examples.
+
 
 # Multi-Fractal Detrended Fluctuation Analysis (MFDFA)
-In what follows, I outline the MFDFA procedure, according to _Kantelhardt et al., 2002_, followed by a detailed account of each step and an elaboration on how multifractal characteristics are computed. 
  
 Given a series $X = x(1), x(2), \cdots, x(N)$, MFDFA processes the series as follows: 
 
@@ -79,5 +83,6 @@ For seeing code and examples, look at the ipynb file.
 ### References
 *  Peng, C.-K., S. V. Buldyrev, S. Havlin, M. Simons, H. E. Stanley, and A. L. Goldberger (1994). “Mosaic organization of DNA nucleotides”. In: Physical Review E 49.2, pp. 1685–1689.
 *  Kantelhardt, JanW., Stephan A. Zschiegner, Eva Koscielny-Bunde, Shlomo Havlin, Armin Bunde, and H.Eugene Stanley (2002). “Multifractal detrended fluctuation analysis of nonstationary time series”. In: Physica A: Statistical Mechanics and Its Applications 316.1, pp. 87–114.
+* Mohseni, Mahdi,Volker Gast, and ChristophRedies (2021). “Fractality andVariability in Canonical and Non-Canonical English Fiction and in Non-Fictional Texts”. In: Frontiers in Psychology 12, p. 920.
 * Drozdz, Stanislaw and Pawel Swiecimka (2015). “Detecting and interpreting distortions in hierarchical organization of complex time series”. In: Physical Review E 91.3, p. 030902.
 * Roeske, Tina C., Damian Kelty-Stephen, and SebastianWallot (2018). “Multifractal analysis reveals music-like dynamic structure in songbird rhythms”. In: Scientific Reports 8.1.
