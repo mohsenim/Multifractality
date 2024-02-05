@@ -10,9 +10,9 @@ Given a series $X = x(1), x(2), \cdots, x(N)$, MFDFA processes the series as fol
 
 1-	  Build the profile of the series by subtracting the mean and computing the cumulative sum:
     
-	$Y(i) = \sum_{k=1}^{i} [x(k) - \langle X\rangle], i=1, \cdots, N$
+$$Y(i) = \sum_{k=1}^{i} [x(k) - \langle X\rangle], i=1, \cdots, N$$
     
-	in which $\langle X\rangle$ is the mean of $X$.
+in which $\langle X\rangle$ is the mean of $X$.
     
 2-	  Divide the profile of the series into $N_s=N/s$ windows for different values of $s$, which is the size of windows.
     As the length of the series, $N$, may not be always divisible by $s$ and a portion of the series in the end may be excluded from the computation, the windowing procedure is repeated starting from the end. As a result, the number of windows increases to $2 \times N_s$.
