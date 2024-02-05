@@ -7,27 +7,21 @@ Probably the most widely used methods to analyze fractality and long-range corre
 In what follows, I outline the MFDFA procedure, according to _Kantelhardt, 2002_, followed by a detailed account of each step and an elaboration on how multifractal characteristics are computed. 
  
 Given a series $X = x(1), x(2), \cdots, x(N)$, MFDFA processes the series as follows: 
+
 1-	  Build the profile of the series by subtracting the mean and computing the cumulative sum:
-    $$
-        Y(i) = \sum_{k=1}^{i} [x(k) - \langle X\rangle], i=1, \cdots, N
-    $$
+    $$ Y(i) = \sum_{k=1}^{i} [x(k) - \langle X\rangle], i=1, \cdots, N$$
     in which $\langle X\rangle$ is the mean of $X$.
     
 2-	  Divide the profile of the series into $N_s=N/s$ windows for different values of $s$, which is the size of windows.
     As the length of the series, $N$, may not be always divisible by $s$ and a portion of the series in the end may be excluded from the computation, the windowing procedure is repeated starting from the end. As a result, the number of windows increases to $2 \times N_s$.
 
 3-	 Detrend the values in each window $v$, $v=1,\cdots,2\times N_s$, by subtracting the best fitting line, $Y'$, and calculate the mean square fluctuation of residuals:
-    $$
-        F^2(s, v)=\frac{1}{s}\sum_{i=1}^{s}[Y(s \times (v-1) + i)-Y'(s \times (v-1) + i)]^2
-    $$
+    $$F^2(s, v)=\frac{1}{s}\sum_{i=1}^{s}[Y(s \times (v-1) + i)-Y'(s \times (v-1) + i)]^2$$
 
 4-	 Calculate the $q$th order of the mean square fluctuations:
-    $$
-        F_q(s) = \{\frac{1}{2\times N_s}\sum_{v=1}^{N_s}[F^2(s, v)]^{q/2}\}^{1/q}
-    $$
+    $$F_q(s) = \{\frac{1}{2\times N_s}\sum_{v=1}^{N_s}[F^2(s, v)]^{q/2}\}^{1/q}$$
 	
 5-	 Compute the growth factor of fluctuations, $h(q)$, using a log-log regression on $F_q(s)$ values, i.e. $\log F_q(s)\sim h(q) \times \log s$
-\end{enumerate}
 
 
 ## Creation and Segmentation of the Profile of Series
