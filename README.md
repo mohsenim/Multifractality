@@ -5,7 +5,7 @@ Probably the most widely used methods to analyze fractality and long-range corre
 
 In what follows, I outline the MFDFA procedure, according to _Kantelhardt et al., 2002_, followed by a detailed account of each step and an elaboration on how multifractal characteristics are computed. 
 
-You can access the code in `MFDFA.py` and view `MFDFA.ipynb` for running the code step by step and seeing examples.
+You can access the code in `MFDFA.py` and view [MFDFA.ipynb](https://github.com/mohsenim/Multifractality/blob/main/MFDFA.ipynb) for running the code step by step and seeing examples.
 
 
 # Multi-Fractal Detrended Fluctuation Analysis (MFDFA)
