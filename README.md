@@ -77,7 +77,7 @@ For seeing code and examples, look at the ipynb file.
 
 
 ### References
-**  Peng, C.-K., S. V. Buldyrev, S. Havlin, M. Simons, H. E. Stanley, and A. L. Goldberger (1994). “Mosaic organization of DNA nucleotides”. In: Physical Review E 49.2, pp. 1685–1689.
-**  Kantelhardt, JanW., Stephan A. Zschiegner, Eva Koscielny-Bunde, Shlomo Havlin, Armin Bunde, and H.Eugene Stanley (2002). “Multifractal detrended fluctuation analysis of nonstationary time series”. In: Physica A: Statistical Mechanics and Its Applications 316.1, pp. 87–114.
-** Drozdz, Stanislaw and Pawel Swiecimka (2015). “Detecting and interpreting distortions in hierarchical organization of complex time series”. In: Physical Review E 91.3, p. 030902.
-** Roeske, Tina C., Damian Kelty-Stephen, and SebastianWallot (2018). “Multifractal analysis reveals music-like dynamic structure in songbird rhythms”. In: Scientific Reports 8.1.
+*  Peng, C.-K., S. V. Buldyrev, S. Havlin, M. Simons, H. E. Stanley, and A. L. Goldberger (1994). “Mosaic organization of DNA nucleotides”. In: Physical Review E 49.2, pp. 1685–1689.
+*  Kantelhardt, JanW., Stephan A. Zschiegner, Eva Koscielny-Bunde, Shlomo Havlin, Armin Bunde, and H.Eugene Stanley (2002). “Multifractal detrended fluctuation analysis of nonstationary time series”. In: Physica A: Statistical Mechanics and Its Applications 316.1, pp. 87–114.
+* Drozdz, Stanislaw and Pawel Swiecimka (2015). “Detecting and interpreting distortions in hierarchical organization of complex time series”. In: Physical Review E 91.3, p. 030902.
+* Roeske, Tina C., Damian Kelty-Stephen, and SebastianWallot (2018). “Multifractal analysis reveals music-like dynamic structure in songbird rhythms”. In: Scientific Reports 8.1.
