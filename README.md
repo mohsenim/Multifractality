@@ -77,7 +77,8 @@ $\alpha_{min}$ and $\alpha_{max}$ denote the leftmost side and the rightmost sid
 The multifractality of series may incline more toward either small or large quantities, leading to a skewness in the singularity spectrum, which can be measured by _fractal asymmetry_ (Drozdz et al., 2015):  
 $$\mathcal{A} = \frac{\Delta\alpha_L-\Delta\alpha_R}{\Delta\alpha_L+\Delta\alpha_R}$$
 $\Delta\alpha_L=\alpha_0-\alpha_{min}$ and $\Delta\alpha_R=\alpha_{max}-\alpha_{0}$ are the width of the right and the left side of the singularity spectrum curve, respectively and $\alpha_0$, corresponding to $q=0$, usually points to the peak of the $f(\alpha)$ curve. 
-For seeing code and examples, look at the ipynb file.
+
+For seeing the code and examples, look at `MDFDA.ipynb` file.
 
 
 ### References
