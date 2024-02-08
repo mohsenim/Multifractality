@@ -6,7 +6,7 @@ from numpy.polynomial.polynomial import polyval, polyfit
 
 def compute_profile(X):
     '''
-    Computes profile of X.
+    Computes the profile of X.
     '''
 
     return np.cumsum(X - np.mean(X))
@@ -41,7 +41,7 @@ def bidir_mean_variance(X, scales, m=1):
 
 def compute_fluctuation_function(mv, qs):
     '''
-    Compute scaling function F
+    Compute the scaling function F
     '''
     out = np.zeros((mv.shape[0], len(qs)), 'f8')
     mv = np.nan_to_num(mv)
@@ -122,8 +122,8 @@ def get_scales(length):
 
 def MFDFA(series):
     '''
-    Returns three fractal metrics: degree of fractality, degree of multifractality, and asymmetry.
-    MFDFA_algorithm returns more metrics and values. If you need them you should
+    Returns three fractal metrics: degree of fractality, degree of multifractality, and fractal asymmetry.
+    MFDFA_algorithm returns more metrics and values. The name of the metircs is self-explanatory.
     :param series:
     :return:
     '''
