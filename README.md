@@ -1,5 +1,5 @@
 # Fractality and Long-Range Correlations
-Fractality are a characteristic of a complex system in which self-similarity at different scales can be found. Fractality quantifies dynamically fluctuating variability of systems through multi-scale analyses and provides insights into underlying structures of objects under study. 
+Fractality is a characteristic of a complex system in which self-similarity at different scales can be found. Fractality quantifies dynamically fluctuating variability of systems through multi-scale analyses and provides insights into underlying structures of objects under study. 
 
 Probably the most widely used methods to analyze fractality and long-range correlations are Detrended Fluctuation Analysis (DFA; Peng et al., 1994) and Multi-Fractal Detrended Fluctuation Analysis (MFDFA; Kantelhardt et al., 2002), which is an extension of DFA. We used MFDFA to analyze long-range correlation patterns of canonical/fictional, non-canonical/fictional and non-fictional texts in our paper (Mohseni et al., 2021). 
 
