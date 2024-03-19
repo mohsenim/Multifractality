@@ -24,7 +24,7 @@ in which $\langle X\rangle$ is the mean of $X$.
 $$F^2(s, v)=\frac{1}{s}\sum_{i=1}^{s}[Y(s \times (v-1) + i)-Y'(s \times (v-1) + i)]^2$$
 
 4-	 Calculate the $q$th order of the mean square fluctuations:
-$$F_q(s) = \{\frac{1}{2\times N_s}\sum_{v=1}^{N_s}[F^2(s, v)]^{q/2}\}^{1/q}$$
+$$F_q(s) = [\frac{1}{2\times N_s}\sum_{v=1}^{N_s}[F^2(s, v)]^{q/2}]^{1/q}$$
 	
 5-	 Compute the growth factor of fluctuations, $h(q)$, using a log-log regression on $F_q(s)$ values, i.e. $\log F_q(s)\sim h(q) \times \log s$
 
