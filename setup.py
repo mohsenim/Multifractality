@@ -15,12 +15,15 @@ setup(
     author="Mahdi Mohseni",
     author_email="mohsnei.cs@gmail.com",
     packages=find_packages(exclude=["tests", "tests.*"]),
+    
     install_requires=[
         "numpy",
         "scikit-learn",
     ],
     classifiers=[
+        "Intended Audience :: Developers",
         "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
     ],
