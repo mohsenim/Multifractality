@@ -1,4 +1,4 @@
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 
 import numpy as np
 from numpy.lib.stride_tricks import as_strided
