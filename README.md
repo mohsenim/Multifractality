@@ -1,3 +1,7 @@
+[![DOI:10.3389/fpsyg.2021.599063](https://img.shields.io/badge/DOI-10.3389%2Ffpsyg.2021.599063-brightgreen)](https://doi.org/10.3389/fpsyg.2021.599063)
+[![PyPI](https://img.shields.io/badge/pypi-v.0.0.4-blue)](https://pypi.org/project/mfdfa-toolkit/)
+![PyPI - License](https://img.shields.io/pypi/l/mfdfa-toolkit)
+
 # Fractality and Long-Range Correlations
 Fractality is a characteristic of a complex system in which self-similarity at different scales can be found. Fractality quantifies dynamically fluctuating variability of systems through multi-scale analyses and provides insights into underlying structures of objects under study. Probably the most widely used methods to analyze fractality and long-range correlations are Detrended Fluctuation Analysis (DFA; Peng et al., 1994) and Multi-Fractal Detrended Fluctuation Analysis (MFDFA; Kantelhardt et al., 2002), which is an extension of DFA. For further explanation, please refer to this medium [post](https://medium.com/@mohsenim/fractality-and-long-range-correlations-case-studies-and-insights-from-the-textual-domain-81810720c4d1) or [this](./MFDFA.md) Github page. 
 
