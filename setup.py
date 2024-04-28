@@ -13,7 +13,7 @@ setup(
     long_description_content_type='text/markdown',
     url="https://github.com/mohsenim/Multifractality",
     author="Mahdi Mohseni",
-    author_email="mohsnei.cs@gmail.com",
+    author_email="mohseni.cs@gmail.com",
     packages=find_packages(exclude=["tests", "tests.*"]),
     
     install_requires=[
